@@ -8,10 +8,10 @@ def get_state():
     for key,value in data.items():
         if type(value) is not int :
             for i in value:
-                #print(type(i))
-                if sys.argv[1].upper().lower() in i['state_name'].upper().lower():
+                if len(sys.argv)>1 and sys.argv[1].upper().lower() in i['state_name'].upper().lower():
                     print('State ID=',i['state_id'],'for',i['state_name'])
-                    #exit()
+                
+
     
                 
 if __name__=='__main__':
